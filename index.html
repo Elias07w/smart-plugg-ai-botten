@@ -3,33 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart Plugg AI - Hjälp med studier</title>
+    <title>Smart Plugg AI - Din Studiehjälp</title>
     <link rel="stylesheet" href="style.css">
-    <!-- LanguageTool integration med TinyMCE för att markera fel i editorn -->
+    <!-- LanguageTool integration med TinyMCE -->
     <script src="https://www.languagetool.org/js/jquery-1.7.0.min.js"></script>
     <script src="https://www.languagetool.org/online-check/tiny_mce/tiny_mce.js"></script>
     <script src="https://www.languagetool.org/online-check/tiny_mce/plugins/atd-tinymce/editor_plugin2.js"></script>
 </head>
 <body>
     <div class="container">
-        <h1>Smart Plugg AI - Din studiehjälp</h1>
-        <p>Beskriv kort vad du vill ha hjälp med (t.ex. "stavning och struktur i min uppsats"):</p>
-        <textarea id="description" rows="3" placeholder="Skriv här..."></textarea>
-        
-        <p>Ladda upp ditt arbete (.txt-fil):</p>
-        <input type="file" id="fileUpload" accept=".txt">
-        
-        <button id="loadButton">Ladda upp och analysera</button>
-        
-        <h2>Din text (redigera och få förslag):</h2>
-        <textarea id="editor" rows="15" placeholder="Din text laddas här..."></textarea>
-        
-        <button id="checkGrammar">Kontrollera stavning och grammatik</button>
-        <button id="getSuggestions">Få strukturförslag</button>
-        
-        <div id="suggestions"></div>
+        <header>
+            <h1>Smart Plugg AI</h1>
+            <p>Din personliga studieassistent</p>
+        </header>
+        <section class="input-section">
+            <p>Beskriv vad du vill ha hjälp med (t.ex. "stavning och struktur i min uppsats"):</p>
+            <textarea id="description" rows="3" placeholder="Skriv din beskrivning här..."></textarea>
+            <p>Ladda upp ditt arbete (.txt-fil):</p>
+            <input type="file" id="fileUpload" accept=".txt">
+            <button id="loadButton">Ladda upp och analysera</button>
+        </section>
+        <section class="editor-section">
+            <h2>Din text</h2>
+            <textarea id="editor" rows="15" placeholder="Din text laddas här..."></textarea>
+            <div class="button-group">
+                <button id="checkGrammar">Kontrollera stavning & grammatik</button>
+                <button id="getSuggestions">Få strukturförslag</button>
+            </div>
+        </section>
+        <section class="suggestions-section">
+            <h3>Förslag och förbättringar</h3>
+            <div id="suggestions"></div>
+        </section>
     </div>
-    
     <script src="script.js"></script>
 </body>
 </html>
