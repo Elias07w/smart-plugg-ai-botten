@@ -53,7 +53,7 @@ document.getElementById('getSuggestions').addEventListener('click', function() {
 
     const prompt = `Ge konkreta förslag på hur man kan förbättra strukturen i denna text baserat på: ${description}. Text: ${text.substring(0, 500)}. Förklara vad som kan ändras (t.ex. lägg till rubriker, dela upp stycken), utan att skriva om hela texten. Svara på svenska.`;
     
-    const API_TOKEN = 'hf_din_token_här'; // Byt ut mot din Hugging Face-token!
+    const API_TOKEN = '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'; // Byt ut mot din Hugging Face-token!
     fetch('https://api-inference.huggingface.co/models/gpt2', {
         method: 'POST',
         headers: {
@@ -71,3 +71,4 @@ document.getElementById('getSuggestions').addEventListener('click', function() {
         document.getElementById('suggestions').innerHTML = '<p>Kunde inte hämta förslag just nu. Kontrollera din API-token eller försök igen senare.</p>';
     });
 });
+
